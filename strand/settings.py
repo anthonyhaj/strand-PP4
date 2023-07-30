@@ -31,7 +31,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     '8000-anthonyhaj-strandpp4-8o0i5h4tuly.ws-eu102.gitpod.io', 
-    'strand-pp4.herokuapp.com',
+    'strand-pp4-6ecd4d0ab995.herokuapp.com',
     'localhost',
 ]
 
