@@ -1,1 +1,1 @@
-web: gunicorn the_diplomat.wsgi
+web: gunicorn strand-pp4.wsgi
