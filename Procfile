@@ -1,1 +1,1 @@
-web: gunicorn strand-pp4.wsgi
+web: gunicorn strand.wsgi
