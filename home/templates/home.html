@@ -1,6 +1,43 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
+
+{% load static %}
 
 {% block content %}
-    <h1>Welcome to our restaurant!</h1>
-    <p>Check out our <a href="{% url 'menu' %}">menu</a>.</p>
-{% endblock content %}
+<!-- Hero Image -->
+<div class="container-fluid p-0">
+    <div class="hero-image mb-4">
+        <img src="{% static 'img/rest-img.jpg' %}" alt="Hero Image" class="img-fluid w-100">
+    </div>
+
+</div>
+
+<!-- Welcome Message -->
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h1>Welcome to Strand Restaurant</h1>
+            <p class="mt-3">
+                Nestled in the heart of the city, our restaurant offers an unforgettable dining experience. Indulge in a
+                culinary journey where every dish is a harmony of flavors, meticulously crafted from the finest, locally
+                sourced ingredients. Our welcoming ambiance, coupled with impeccable service, ensures that every moment
+                spent here is a celebration of good food and great company. Join us and partake in a gastronomic
+                adventure that's steeply rooted in tradition, yet daringly modern.
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- How to find us -->
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h2>How to Find Us</h2>
+            <!-- You can use Google Maps embed API here -->
+            <div id="map" class="mt-3">
+                <!-- Your embedded map goes here -->
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
