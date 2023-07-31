@@ -10,3 +10,10 @@ class RestaurantTable(models.Model):
 
     def __str__(self):
         return self.name
+
+class Booking(models.Model):
+    class StatusChoices(models.TextChoices):
+        PENDING = 'P', 'Pending'
+        CONFIRMED = 'C', 'Confirmed'
+        COMPLETED = 'CP', 'Completed'
+        CANCELLED = 'CL', 'Cancelled'
