@@ -4,14 +4,16 @@ from django.core.exceptions import ValidationError
 from django.utils import timezone
 
 
-
 class RestaurantTable(models.Model):
-    name = models.CharField(max_length=50)
+    name = models.CharField(max_length=50, unique=True)
     max_seats = models.IntegerField()
     available = models.BooleanField(default=True)
-
+    
     def __str__(self):
         return self.name
+
+    def is_booked(self, date, timeslot):
+        return self.booking_set.filter(requested_date=date, requested_time=timeslot).exists()
 
 
 class TimeSlots(models.TextChoices):
@@ -43,7 +45,6 @@ class Booking(models.Model):
     )
     table = models.ForeignKey(RestaurantTable, on_delete=models.CASCADE)
     guest = models.ForeignKey(User, on_delete=models.CASCADE)
-    seats = models.IntegerField()
     guest_count = models.IntegerField()
     status = models.CharField(
         max_length=2,
@@ -54,16 +55,11 @@ class Booking(models.Model):
     def __str__(self):
         return f'{self.table.name} - {self.guest.username}'
 
-
     def clean(self):
-        # Ensure seats and guest_count are not negative
-        if self.seats < 0 or self.guest_count < 0:
-            raise ValidationError("Seats and guest count cannot be negative.")
+        # Ensure guest_count is not negative
+        if self.guest_count < 0:
+            raise ValidationError("Guest count cannot be negative.")
 
         # Ensure guest_count does not exceed seats
-        if self.guest_count > self.seats:
+        if self.guest_count > self.table.max_seats:
             raise ValidationError("Guest count cannot exceed number of seats.")
-
-        # Ensure requested_date is not in the past
-        if self.requested_date < timezone.now().date():
-            raise ValidationError("Requested date cannot be in the past.")
