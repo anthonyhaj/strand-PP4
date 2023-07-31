@@ -1,23 +1,30 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 
 {% block content %}
-  <h1>Menu</h1>
-  
-  <h2>Food</h2>
-  {% for food in food_items %}
-  <div>
-    <h3>{{ food.name }}</h3>
-    <p>{{ food.description }}</p>
-    <p>{{ food.price }}</p>
-  </div>
-  {% endfor %}
-  
-  <h2>Drinks</h2>
-  {% for drink in drink_items %}
-  <div>
-    <h3>{{ drink.name }}</h3>
-    <p>{{ drink.description }}</p>
-    <p>{{ drink.price }}</p>
-  </div>
-  {% endfor %}
-{% endblock %}
+    <h1>Menu</h1>
+    <h2>Food</h2>
+    <ul>
+    {% for food in food_items %}
+        <li>
+            <h3>{{ food.name }}</h3>
+            <p>{{ food.description }}</p>
+            <p>${{ food.price }}</p>
+        </li>
+    {% empty %}
+        <p>No food items available at the moment.</p>
+    {% endfor %}
+    </ul>
+
+    <h2>Drinks</h2>
+    <ul>
+    {% for drink in drink_items %}
+        <li>
+            <h3>{{ drink.name }}</h3>
+            <p>{{ drink.description }}</p>
+            <p>${{ drink.price }}</p>
+        </li>
+    {% empty %}
+        <p>No drink items available at the moment.</p>
+    {% endfor %}
+    </ul>
+{% endblock content %}
