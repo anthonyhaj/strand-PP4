@@ -3,6 +3,8 @@ from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 from django.utils import timezone
 
+
+
 class RestaurantTable(models.Model):
     name = models.CharField(max_length=50)
     max_seats = models.IntegerField()
@@ -52,7 +54,7 @@ class Booking(models.Model):
     def __str__(self):
         return f'{self.table.name} - {self.guest.username}'
 
-        
+
     def clean(self):
         # Ensure seats and guest_count are not negative
         if self.seats < 0 or self.guest_count < 0:
