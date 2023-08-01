@@ -1,30 +1,96 @@
 {% extends "base.html" %}
-
 {% block content %}
-    <h1>Menu</h1>
-    <h2>Food</h2>
-    <ul>
-    {% for food in food_items %}
-        <li>
-            <h3>{{ food.name }}</h3>
-            <p>{{ food.description }}</p>
-            <p>${{ food.price }}</p>
-        </li>
-    {% empty %}
-        <p>No food items available at the moment.</p>
-    {% endfor %}
-    </ul>
+<div class="container">
+    <h1 class="mt-5 text-center">Menu</h1>
 
-    <h2>Drinks</h2>
-    <ul>
-    {% for drink in drink_items %}
-        <li>
-            <h3>{{ drink.name }}</h3>
-            <p>{{ drink.description }}</p>
-            <p>${{ drink.price }}</p>
-        </li>
-    {% empty %}
-        <p>No drink items available at the moment.</p>
-    {% endfor %}
-    </ul>
+    <h2 class="mt-4">Food:</h2>
+
+    <h3 class="text-center">Appetizers</h3>
+    <div class="row">
+        {% for food in appetizers %}
+        <div class="col-lg-4 mb-4">
+            <div class="card h-100 bg-gray border-color">
+                <div class="card-body">
+                    <h5 class="card-title">{{ food.name }}</h5>
+                    <p class="card-text">{{ food.description }}</p>
+                    <p class="card-text">${{ food.price }}</p>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <p>No appetizers available at the moment.</p>
+        {% endfor %}
+    </div>
+
+    <h3 class="text-center">Main Courses</h3>
+    <div class="row">
+        {% for food in main_courses %}
+        <div class="col-lg-4 mb-4">
+            <div class="card h-100 bg-gray border-color">
+                <div class="card-body">
+                    <h5 class="card-title">{{ food.name }}</h5>
+                    <p class="card-text">{{ food.description }}</p>
+                    <p class="card-text">${{ food.price }}</p>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <p>No main courses available at the moment.</p>
+        {% endfor %}
+    </div>
+
+    <h2 class="mt-4">Drinks:</h2>
+
+    <h3 class="text-center">Soft Drinks</h3>
+    <div class="row">
+        {% for drink in soft_drinks %}
+        <div class="col-lg-4 mb-4">
+            <div class="card h-100 bg-gray border-color">
+                <div class="card-body">
+                    <h5 class="card-title">{{ drink.name }}</h5>
+                    <p class="card-text">{{ drink.description }}</p>
+                    <p class="card-text">${{ drink.price }}</p>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <p>No soft drinks available at the moment.</p>
+        {% endfor %}
+    </div>
+
+    <h3 class="text-center">Wines</h3>
+    <div class="row">
+        {% for drink in wines %}
+        <div class="col-lg-4 mb-4">
+            <div class="card h-100 bg-gray border-color">
+                <div class="card-body">
+                    <h5 class="card-title">{{ drink.name }}</h5>
+                    <p class="card-text">{{ drink.description }}</p>
+                    <p class="card-text">${{ drink.price }}</p>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <p>No wines available at the moment.</p>
+        {% endfor %}
+    </div>
+
+    <h3 class="text-center">Beers</h3>
+    <div class="row">
+        {% for drink in beers %}
+        <div class="col-lg-4 mb-4">
+            <div class="card h-100 bg-gray border-color">
+                <div class="card-body">
+                    <h5 class="card-title">{{ drink.name }}</h5>
+                    <p class="card-text">{{ drink.description }}</p>
+                    <p class="card-text">${{ drink.price }}</p>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <p>No beers available at the moment.</p>
+        {% endfor %}
+    </div>
+
+</div>
 {% endblock content %}
