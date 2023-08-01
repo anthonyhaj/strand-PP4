@@ -12,7 +12,7 @@ def register(request):
             return redirect('accounts:success') 
     else:
         form = RegisterForm()
-    return render(request, 'register.html', {'form': form})
+    return render(request, 'accounts/register.html', {'form': form})
 
 def register_success(request):
     return render(request, 'success.html')
