@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from .forms import RegisterForm
 from django.contrib import messages
 from django.contrib.auth import authenticate, login
+from django.contrib.auth import logout
 
 def register(request):
     if request.method == "POST":
@@ -31,3 +32,7 @@ def login_view(request):
             return render(request, 'accounts/login.html', {'error': 'Invalid login credentials'})
     else:
         return render(request, 'accounts/login.html')
+
+def logout_view(request):
+    logout(request)
+    return redirect('home.html')
