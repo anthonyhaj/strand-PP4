@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'cloudinary_storage',
     'django.contrib.staticfiles',
+    'widget_tweaks',
     'cloudinary',
     'home',
     'bookings',
