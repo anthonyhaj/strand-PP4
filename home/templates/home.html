@@ -3,13 +3,6 @@
 {% load static %}
 
 {% block content %}
-<!-- Hero Image -->
-<div class="container-fluid p-0">
-    <div class="hero-image mb-4">
-        <img src="{% static 'img/rest-img.jpg' %}" alt="Hero Image" class="img-fluid w-100">
-    </div>
-</div>
-
 <!-- Welcome Message -->
 <div class="container mt-5">
     <div class="row">
@@ -20,12 +13,18 @@
                 culinary journey where every dish is a harmony of flavors, meticulously crafted from the finest, locally
                 sourced ingredients. Our welcoming ambiance, coupled with impeccable service, ensures that every moment
                 spent here is a celebration of good food and great company. Join us and partake in a gastronomic
-                adventure that's steeply rooted in tradition, yet daringly modern.
+                adventure that's steeply rooted in tradition.
             </p>
         </div>
     </div>
 </div>
-
+<hr>
+<!-- Hero Image -->
+<div class="container-fluid p-0">
+    <div class="hero-image mb-4">
+        <img src="{% static 'img/rest-img.jpg' %}" alt="Hero Image" class="img-fluid w-100">
+    </div>
+</div>
 <!-- How to find us -->
 <div class="container mt-5 mb-5">
     <div class="row">
