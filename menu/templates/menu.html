@@ -2,8 +2,8 @@
 {% block content %}
 <div class="container">
     <h1 class="mt-5 text-center">Menu</h1>
-
-    <h2 class="mt-4">Food:</h2>
+    <hr>
+    <h2 class="mt-4">Food</h2>
 
     <h3 class="text-center">Appetizers</h3>
     <div class="row">
@@ -39,7 +39,24 @@
         {% endfor %}
     </div>
 
-    <h2 class="mt-4">Drinks:</h2>
+    <h3 class="text-center">Desserts</h3>
+    <div class="row">
+        {% for food in desserts %}
+        <div class="col-lg-4 mb-4">
+            <div class="card h-100 bg-gray border-color">
+                <div class="card-body">
+                    <h5 class="card-title">{{ food.name }}</h5>
+                    <p class="card-text">{{ food.description }}</p>
+                    <p class="card-text">${{ food.price }}</p>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <p>No desserts available at the moment.</p>
+        {% endfor %}
+    </div>
+    <hr>
+    <h2 class="mt-4">Drinks</h2>
 
     <h3 class="text-center">Soft Drinks</h3>
     <div class="row">
