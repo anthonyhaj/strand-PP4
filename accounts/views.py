@@ -36,3 +36,8 @@ def login_view(request):
 def logout_view(request):
     logout(request)
     return redirect('home')
+
+
+def logout_confirm(request):
+    return render(request, 'accounts/logout_confirm.html')
+
