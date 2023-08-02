@@ -41,3 +41,4 @@ def logout_view(request):
 def logout_confirm(request):
     return render(request, 'accounts/logout_confirm.html')
 
+

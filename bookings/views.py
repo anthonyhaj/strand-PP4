@@ -11,12 +11,10 @@ def book(request):
             booking = form.save(commit=False)
             booking.guest = request.user
             booking.save()
-            return redirect('my_bookings') 
+            return redirect('home') 
     else:
         form = BookingForm()
     return render(request, 'bookings.html', {'form': form})
 
-@login_required
-def my_bookings(request):
-    bookings = Booking.objects.filter(guest=request.user)
-    return render(request, 'my_bookings.html', {'bookings': bookings})
+def login_required_view(request):
+    return render(request, 'login_required.html')
