@@ -8,10 +8,10 @@ class BookingForm(forms.ModelForm):
     requested_date = forms.DateField(widget=forms.SelectDateWidget)
     requested_time = forms.ChoiceField(choices=TimeSlots.choices)
     requested_time.choice_field = True
-    guests = forms.IntegerField()
+    guest_count = forms.IntegerField()
     table = forms.ModelChoiceField(queryset=RestaurantTable.objects.all())
     table.choice_field = True
 
     class Meta:
         model = Booking
-        fields = ['name', 'email', 'phone_number', 'requested_date', 'requested_time', 'guests', 'table']
+        fields = ['name', 'email', 'phone_number', 'requested_date', 'requested_time', 'guest_count', 'table']

@@ -55,11 +55,3 @@ class Booking(models.Model):
     def __str__(self):
         return f'{self.table.name} - {self.guest.username}'
 
-    def clean(self):
-        # Ensure guest_count is not negative
-        if self.guest_count < 0:
-            raise ValidationError("Guest count cannot be negative.")
-
-        # Ensure guest_count does not exceed seats
-        if self.guest_count > self.table.max_seats:
-            raise ValidationError("Guest count cannot exceed number of seats.")
