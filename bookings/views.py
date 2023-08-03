@@ -37,3 +37,17 @@ def delete_booking(request, booking_id):
     else:
         return render(request, 'bookings/confirm_delete.html', {'booking': booking})
 
+@login_required
+def change_booking(request, booking_id):
+    booking = get_object_or_404(Booking, id=booking_id)
+    if request.user != booking.guest:
+        return HttpResponseForbidden()
+
+    if request.method == "POST":
+        form = BookingForm(request.POST, instance=booking)
+        if form.is_valid():
+            form.save()
+            return redirect('bookings:mybookings') 
+    else:
+        form = BookingForm(instance=booking)
+    return render(request, 'bookings/change_booking.html', {'form': form, 'booking': booking})
