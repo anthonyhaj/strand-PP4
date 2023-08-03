@@ -33,9 +33,9 @@ def login_view(request):
 def logout_confirm(request):
     if request.method == "POST":
         logout(request)
-        return redirect('home')
-    else:
-        return render(request, 'logout_confirm.html')
+        return redirect('accounts:logout_confirmed')
+    return render(request, 'logout_confirm.html')
 
 def logout_confirmed(request):
     return render(request, 'accounts/logout_confirmed.html')
+
