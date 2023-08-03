@@ -18,3 +18,13 @@ def book(request):
 
 def login_required_view(request):
     return render(request, 'login_required.html')
+
+from django.shortcuts import render
+from .models import Booking
+
+def my_bookings(request):
+    if request.user.is_authenticated:
+        bookings = Booking.objects.filter(user=request.user)
+        return render(request, 'bookings/my_bookings.html', {'bookings': bookings})
+    else:
+        return redirect('accounts:login')
