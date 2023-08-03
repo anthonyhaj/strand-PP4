@@ -38,7 +38,7 @@ def logout_view(request):
     return redirect('home')
 
 
-def logout_confirm(request):
-    return render(request, 'accounts/logout_confirm.html')
+def logout_confirmed(request):
+    return render(request, 'accounts/logout_confirmed.html')
 
 
