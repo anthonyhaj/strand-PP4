@@ -14,7 +14,7 @@
                     <p class="card-text">Table: {{ booking.table.name }}</p>
                     <p class="card-text">Status: {{ booking.get_status_display }}</p>
                     <a href="#" class="btn btn-warning">Change</a>
-                    <a href="#" class="btn btn-danger">Cancel</a>
+                    <a href="{% url 'bookings:delete_booking' booking.id %}" class="btn btn-danger">Cancel</a>
                 </div>
             </div>
         </div>
