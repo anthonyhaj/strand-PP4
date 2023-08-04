@@ -17,6 +17,10 @@ body {
     background-color: #333;
 }
 
+.custom-bg-color {
+    background-color: #242526;
+}
+
 /* nav styles */
 
 .navbar-toggler-icon {
@@ -33,6 +37,8 @@ body {
 .border-color {
     border-color: #fff;
 }
+
+
 
 
 
