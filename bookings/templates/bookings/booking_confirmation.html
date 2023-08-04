@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-4" style="margin-bottom: 325px;">
+    <div class="row justify-content-center">
+        <div class="col-lg-5">
+            <div class="card text-white bg-dark mb-3">
+                <div class="card-header text-center">
+                    <h2>Booking Confirmation</h2>
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title text-center">Thank you for your booking!</h4>
+                    <p class="card-text text-center">We are looking forward to your visit.</p>
+                    <div class="d-flex justify-content-around">
+                        <a href="{% url 'home' %}" class="btn btn-warning">Home</a>
+                        <a href="{% url 'menu' %}" class="btn btn-warning">See Menu</a>
+                        <a href="{% url 'bookings:mybookings' %}" class="btn btn-warning">My Bookings</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
