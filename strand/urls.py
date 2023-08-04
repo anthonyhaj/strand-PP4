@@ -9,5 +9,6 @@ urlpatterns = [
     path('bookings/', include('bookings.urls')),
     path('accounts/', include('accounts.urls')),
     path('', include('home.urls')),
+    path('', include('contact.urls')),
     path('login_required/', bookings_views.login_required_view, name='login_required'),
 ]
