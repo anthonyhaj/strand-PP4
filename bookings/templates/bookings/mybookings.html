@@ -7,8 +7,9 @@
         {% for booking in bookings %}
         <div class="card mt-4 bg-dark text-white" style="width: 24rem;">
             <div class="card-body">
-                <h5 class="card-title">{{ booking.requested_date }}</h5>
-                <p class="card-text">{{ booking.get_requested_time_display }}</p>
+                <h5 class="card-title">Booking for: {{ booking.user.first_name }}</h5>
+                <p class="card-text">Date: {{ booking.requested_date }}</p>
+                <p class="card-text">Time: {{ booking.get_requested_time_display }}</p>
                 <p class="card-text">{{ booking.guest_count }} guests</p>
                 <p class="card-text">Table: {{ booking.table.name }}</p>
                 <p class="card-text">Status: {{ booking.get_status_display }}</p>
