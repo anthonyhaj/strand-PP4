@@ -45,10 +45,10 @@
                     </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="{% url 'bookings:mybookings' %}">My Bookings</a>
+                        <span class="nav-link text-white">Logged in as {{ user.username }}</span>
                     </li>
                     <li class="nav-item">
-                        <span class="nav-link text-white">Logged in as {{ user.username }}</span>
+                        <a class="nav-link text-white" href="{% url 'bookings:mybookings' %}">My Bookings</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white" href="{% url 'accounts:logout' %}">Logout</a>
