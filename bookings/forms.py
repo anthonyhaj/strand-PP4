@@ -30,7 +30,8 @@ class BookingForm(forms.ModelForm):
         today = date.today()
         now = datetime.now().time()
 
-        # Check if the requested date is today and the requested time has passed
+        # Check if the requested date is today
+        # and the requested time has passed
         if requested_date == today and requested_time < now:
             raise ValidationError({
                 'requested_time': ValidationError('The requested time is in the past.', code='past_time')
