@@ -11,10 +11,15 @@ def book(request):
             booking = form.save(commit=False)
             booking.guest = request.user
             booking.save()
-            return redirect('home') 
+            return redirect('bookings:booking_confirmation') 
     else:
         form = BookingForm()
     return render(request, 'bookings.html', {'form': form})
+
+
+def booking_confirmation(request):
+    return render(request, 'bookings/booking_confirmation.html')
+
 
 def login_required_view(request):
     return render(request, 'login_required.html')
