@@ -35,11 +35,11 @@ class Booking(models.Model):
         CONFIRMED = 'CF', 'Confirmed'
         COMPLETED = 'CM', 'Completed'
         CANCELLED = 'CL', 'Cancelled'
-    
+
     created_date = models.DateTimeField(default=timezone.now)
     requested_date = models.DateField()
     requested_time = models.CharField(
-        max_length=5, 
+        max_length=5,
         choices=TimeSlots.choices,
         default=TimeSlots.SLOT_1,
     )
@@ -51,7 +51,11 @@ class Booking(models.Model):
         choices=BookingStatus.choices,
         default=BookingStatus.PENDING,
     )
+    name = models.CharField(max_length=50, null=True)
+    email = models.EmailField(null=True)
+    phone_number = models.CharField(max_length=15, null=True)
 
     def __str__(self):
         return f'{self.table.name} - {self.guest.username}'
+
 

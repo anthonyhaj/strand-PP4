@@ -82,7 +82,22 @@ create an account, see the menu, or contact the business.
 20. As a **Site Owner**, I can **ensure that my site is fully responsive** so that **it can be used across all devices**
 21. As a **Site Owner**, I can **ensure that my site has data validation** so that **all submitted data is validated to avoid errors**
 
+### Epics and Github Projects
+- Github projects was used to track and create user stories
+- Epics were created using milestones
 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+## Design
+
+### Colors
+
+- The colors a chose consist of dark grays and gold keeping the colors balanced and contrasted well
+as a dark theme
+
+<details><summary>See color pallet</summary>
+<img src="docs/palette.png">
+</details>
 
 
 

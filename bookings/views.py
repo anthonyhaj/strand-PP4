@@ -55,4 +55,7 @@ def change_booking(request, booking_id):
             return redirect('bookings:mybookings') 
     else:
         form = BookingForm(instance=booking)
+
     return render(request, 'bookings/change_booking.html', {'form': form, 'booking': booking})
+
+
