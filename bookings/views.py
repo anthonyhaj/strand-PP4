@@ -44,7 +44,8 @@ def mybookings(request):
     """
     if request.user.is_authenticated:
         bookings = Booking.objects.filter(guest=request.user)
-        return render(request, 'bookings/mybookings.html', {'bookings': bookings})
+        return render(request, 'bookings/mybookings.html', {
+            'bookings': bookings})
     else:
         return redirect('accounts:login')
 
@@ -64,8 +65,8 @@ def delete_booking(request, booking_id):
         messages.success(request, "Your booking was successfully cancelled.")
         return redirect('bookings:mybookings')
     else:
-        return render(request, 'bookings/confirm_delete.html', {'booking': booking})
-
+        return render(request, 'bookings/confirm_delete.html', {
+            'booking': booking})
 
 
 @login_required
@@ -89,11 +90,13 @@ def change_booking(request, booking_id):
             'name': booking.name,
             'email': booking.email,
             'phone_number': booking.phone_number,
-            'requested_date': booking.requested_date.strftime("%Y-%m-%d") if booking.requested_date else None,
+            'requested_date': booking.requested_date.strftime(
+                "%Y-%m-%d") if booking.requested_date else None,
             'requested_time': booking.requested_time,
             'guest_count': booking.guest_count,
             'table': booking.table.id
         }
         form = BookingForm(instance=booking, initial=initial_data)
 
-    return render(request, 'bookings/change_booking.html', {'form': form, 'booking': booking})
+    return render(request, 'bookings/change_booking.html', {
+        'form': form, 'booking': booking})

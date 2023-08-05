@@ -27,7 +27,8 @@ class BookingForm(forms.ModelForm):
         Meta class to specify the associated model and its fields
         """
         model = Booking
-        fields = ['name', 'email', 'phone_number', 'requested_date', 'requested_time', 'guest_count', 'table']
+        fields = ['name', 'email', 'phone_number', 'requested_date',
+                  'requested_time', 'guest_count', 'table']
 
     def __init__(self, *args, **kwargs):
         super(BookingForm, self).__init__(*args, **kwargs)
@@ -41,7 +42,8 @@ class BookingForm(forms.ModelForm):
         cleaned_data = super().clean()
 
         requested_date = cleaned_data.get('requested_date')
-        requested_time = time.fromisoformat(cleaned_data.get('requested_time', ''))
+        requested_time = time.fromisoformat(
+            cleaned_data.get('requested_time', ''))
 
         today = date.today()
         now = datetime.now().time()
@@ -50,7 +52,8 @@ class BookingForm(forms.ModelForm):
         # and the requested time has passed
         if requested_date == today and requested_time < now:
             raise ValidationError({
-                'requested_time': ValidationError('The requested time is in the past.', code='past_time')
+                'requested_time': ValidationError(
+                    'The requested time is in the past.', code='past_time')
             })
 
         return cleaned_data

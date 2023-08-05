@@ -21,7 +21,8 @@ class RestaurantTable(models.Model):
         return self.name
 
     def is_booked(self, date, timeslot):
-        return self.booking_set.filter(requested_date=date, requested_time=timeslot).exists()
+        return self.booking_set.filter(
+            requested_date=date, requested_time=timeslot).exists()
 
 
 # Choices for different time slots

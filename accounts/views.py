@@ -17,7 +17,8 @@ def register(request):
         form = RegisterForm(request.POST)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Registration successful. You can now log in to your account.')
+            messages.success(request, 'Registration successful. '
+                                      'You can now log in to your account.')
             return redirect('accounts:success')
     else:
         form = RegisterForm()
@@ -43,7 +44,8 @@ def login_view(request):
             login(request, user)
             return redirect('home')
         else:
-            return render(request, 'accounts/login.html', {'error': 'Invalid login credentials'})
+            return render(request, 'accounts/login.html',
+                          {'error': 'Invalid login credentials'})
     else:
         return render(request, 'accounts/login.html')
 
