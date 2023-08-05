@@ -7,7 +7,7 @@
         {% for booking in bookings %}
         <div class="card mt-4 custom-bg-color text-white" style="width: 24rem;">
             <div class="card-body">
-                <h5 class="card-title">Booking for: {{ booking.user.first_name }}</h5>
+                <h5 class="card-title">Name: {{ booking.name }}</h5>
                 <p class="card-text">Date: {{ booking.requested_date }}</p>
                 <p class="card-text">Time: {{ booking.get_requested_time_display }}</p>
                 <p class="card-text">{{ booking.guest_count }} guests</p>
