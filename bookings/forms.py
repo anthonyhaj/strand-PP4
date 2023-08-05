@@ -2,6 +2,7 @@ from django import forms
 from django.core.exceptions import ValidationError
 from datetime import date, datetime, time
 from .models import Booking, RestaurantTable, TimeSlots
+from django.utils import timezone
 
 class BookingForm(forms.ModelForm):
     name = forms.CharField(max_length=50)
