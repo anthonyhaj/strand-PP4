@@ -210,3 +210,15 @@ The Contact Model contains:
 
 ### Libraries & Tools
 
+- Am I Responsive
+- Bootstrap 5
+- Font Awesome
+- Chrome dev tools
+- Pexels.com
+- Cloudinary
+- Pycharm
+- Git
+- GitHub
+- Heroku 
+- jQuery
+- Postgres
