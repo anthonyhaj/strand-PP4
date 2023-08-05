@@ -1,12 +1,12 @@
 # Imports
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # 3rd party:
-from django import forms
 from django.core.exceptions import ValidationError
-from datetime import date, datetime, time
 from django.utils import timezone
-# Internal
+# Internal:
 from .models import Booking, RestaurantTable, TimeSlots
+from django import forms
+from datetime import date, datetime, time
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 

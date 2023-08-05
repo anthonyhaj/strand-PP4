@@ -51,7 +51,7 @@ def mybookings(request):
 
 def delete_booking(request, booking_id):
     """
-    View to delete a booking for the authenticated user if logged in and has permission.
+    View to delete a booking for the authenticated user
     If the booking exists and belongs to the user, it can be deleted.
     After successful deletion, the user sees success message
     """
@@ -97,4 +97,3 @@ def change_booking(request, booking_id):
         form = BookingForm(instance=booking, initial=initial_data)
 
     return render(request, 'bookings/change_booking.html', {'form': form, 'booking': booking})
-
