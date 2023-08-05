@@ -2,6 +2,8 @@ from django.contrib import admin
 from django.urls import path, include
 from bookings import views as bookings_views
 
+handler404 = 'home.views.handler404'
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('menu/', include('menu.urls')),

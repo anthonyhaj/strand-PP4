@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-5">
+            <div class="text-center my-4">
+                <h2>Page Not Found</h2>
+                <hr class="mb-4">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container" style="margin-bottom: 325px;">
+    <div class="row justify-content-center">
+        <div class="col-lg-5 custom-bg-color text-white rounded">
+            <h2 class="text-center my-4">Oops! The page you are looking for might have been removed, had its name
+                changed, or is temporarily unavailable.</h2>
+            <div class="d-flex justify-content-center mb-3">
+                <a href="{% url 'home' %}" class="btn btn-warning text-dark">Return to Home Page</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
