@@ -1,5 +1,7 @@
 {% extends "base.html" %}
+
 {% block content %}
+<!-- Page header -->
 <div class="container mt-4">
     <div class="row justify-content-center">
         <div class="col-lg-5">
@@ -10,27 +12,36 @@
         </div>
     </div>
 </div>
+
+<!-- Registration form -->
 <div class="container" style="margin-bottom: 150px;">
     <div class="row justify-content-center">
         <div class="col-lg-5 custom-bg-color text-white rounded">
             <h2 class="text-center my-4">Register</h2>
             <form method="POST" class="mb-5">
                 {% csrf_token %}
+                <!-- Iterate over each field in the form -->
                 {% for field in form %}
                 <div class="form-group">
                     <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                    <!-- Create an input field based on the field type -->
                     <input type="{{ field.field.widget.input_type }}" class="form-control" id="{{ field.auto_id }}"
                         name="{{ field.name }}" value="{{ field.value|default:'' }}" />
+
+                    <!-- Display field errors if there are any -->
                     {% if field.errors %}
+                    <!-- Display the help text for the field if available -->
                     {% if field.help_text %}
                     <small class="form-text text-muted">{{ field.help_text }}</small>
                     {% endif %}
+                    <!-- Iterate over each error and display them in an alert box -->
                     {% for error in field.errors %}
                     <div class="alert alert-danger">{{ error }}</div>
                     {% endfor %}
                     {% endif %}
                 </div>
                 {% endfor %}
+                <!-- Submit button -->
                 <div class="d-flex justify-content-center mb-3">
                     <button type="submit" class="btn btn-warning text-dark">Submit</button>
                 </div>

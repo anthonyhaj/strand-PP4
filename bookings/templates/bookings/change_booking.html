@@ -11,42 +11,54 @@
         </div>
     </div>
 </div>
+
 <div class="container" style="margin-bottom: 275px;">
     <div class="row justify-content-center">
         <div class="col-lg-5 custom-bg-color text-white rounded">
             <h2 class="text-center my-4">Update Booking Information</h2>
             <form method="POST" class="mb-5">
                 {% csrf_token %}
+                <!-- This loops through each field in the form -->
                 {% for field in form %}
                 <div class="form-group">
+                    <!-- This labels each form input with the name of the field -->
                     <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                    <!-- This checks if the current field is a choice field -->
                     {% if field.field.choice_field %}
+                    <!-- If it is, it creates a dropdown menu for the choices -->
                     <select name="{{ field.name }}" id="{{ field.auto_id }}" class="form-control"
                         style="color:black;background:white;">
+                        <!-- This populates the dropdown menu with the available choices -->
                         {% for choice in field.field.choices %}
                         <option value="{{ choice.0 }}" {% if field.value == choice.0 %} selected {% endif %}
                             style="color:black;">{{ choice.1 }}</option>
                         {% endfor %}
                     </select>
                     {% elif field.name == "requested_date" %}
+                    <!-- If the current field is the "requested_date", it creates a date input field -->
                     <input type="date" class="form-control" id="{{ field.auto_id }}" name="{{ field.name }}"
                         value="{{ field.value|default:'' }}" />
                     {% else %}
+                    <!-- For all other fields, it creates a standard input field -->
                     <input type="{{ field.field.widget.input_type }}" class="form-control" id="{{ field.auto_id }}"
                         name="{{ field.name }}" value="{{ field.value|default:'' }}" />
                     {% endif %}
+                    <!-- If there is help text for the field, it is displayed below the input -->
                     {% if field.help_text %}
                     <small class="form-text text-muted">{{ field.help_text }}</small>
                     {% endif %}
+                    <!-- If there are any validation errors for the field, they are displayed in an alert box -->
                     {% for error in field.errors %}
                     <div class="alert alert-danger">{{ error }}</div>
                     {% endfor %}
                 </div>
                 {% endfor %}
+                <!-- Submit Button -->
                 <div class="d-flex justify-content-center mb-3">
                     <button type="submit" class="btn btn-warning text-dark">Save Changes</button>
                 </div>
             </form>
+            <!-- If there is an error message, it is displayed in an alert box -->
             {% if error %}
             <div class="alert alert-danger mt-3">{{ error }}</div>
             {% endif %}

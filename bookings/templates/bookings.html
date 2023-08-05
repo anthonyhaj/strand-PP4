@@ -2,15 +2,12 @@
 {% load static %}
 
 {% block content %}
-<!-- This creates a container in the page -->
+<!-- Page header -->
 <div class="container mt-4">
-    <!-- This centers the content -->
     <div class="row justify-content-center">
         <div class="col-lg-5">
             <div class="text-center my-4">
-                <!-- This is the title of the page -->
                 <h2>Book a Table</h2>
-                <!-- This creates a horizontal line below the title -->
                 <hr class="mb-4">
             </div>
         </div>
@@ -21,9 +18,7 @@
     <div class="row justify-content-center">
         <div class="col-lg-5 custom-bg-color text-white rounded">
             <h2 class="text-center my-4">Booking information</h2>
-            <!-- This form will POST the data when the submit button is clicked -->
             <form method="POST" class="mb-5">
-                <!-- This adds the necessary CSRF token for security purposes -->
                 {% csrf_token %}
                 <!-- This loops through each field in the form -->
                 {% for field in form %}
@@ -60,7 +55,7 @@
                     {% endfor %}
                 </div>
                 {% endfor %}
-                <!-- This creates the submit button for the form -->
+                <!-- Submit Button -->
                 <div class="d-flex justify-content-center mb-3">
                     <button type="submit" class="btn btn-warning text-dark">Book</button>
                 </div>
@@ -72,6 +67,7 @@
         </div>
     </div>
 </div>
+<!-- Custom javascript -->
 {% block extra_js %}
 <script src="{% static 'js/script.js' %}"></script>
 {% endblock extra_js %}
