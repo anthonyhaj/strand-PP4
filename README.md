@@ -101,12 +101,12 @@ as a dark theme
 
 - The fonts used were the default Montserrat and sans-serif
 
-### Structure
+## Structure
 
 The site was structured using a basic logo and navigation layout showing all relevant links
 and hamburger menu for smaller devices. The footer consists of 3 social media links
 
-#### Pages
+### Pages
 - Home page with a welcome message, carousel of restaurant images, how to find us section
 and contact information/opening hours
 - Menu page with all food and drink items shown in cards and sorted by type retrieved from
@@ -122,7 +122,7 @@ contact information/opening hours below the form
 - Register page allows the user to register for an account in order to book a table
 - Log In page allows user to log into their account to interact with bookings
 
-#### Database
+### Database
 - Built with Python and Django with a Postgres database
 - Database schema created using dbdiagram.io
 
@@ -130,7 +130,7 @@ contact information/opening hours below the form
 <img src="docs/db-schema.png">
 </details>
 
-##### User Model
+#### User Model
 
 The User Model contains:
 
@@ -146,7 +146,7 @@ The User Model contains:
 - is_active
 - date_joined
 
-##### FoodItem Model
+#### FoodItem Model
 
 The FoodItem Model contains
 
@@ -156,7 +156,7 @@ The FoodItem Model contains
 - type
 - price
 
-##### DrinkItem Model
+#### DrinkItem Model
 
 The DrinkItem Model contains:
 
@@ -166,7 +166,7 @@ The DrinkItem Model contains:
 - type
 - price
 
-##### Booking Model
+#### Booking Model
 
 The Booking Model contains:
 
@@ -179,7 +179,7 @@ The Booking Model contains:
 - seats
 - guest_count
 
-##### Table Model
+#### Table Model
 
 The Table Model contains:
 
@@ -188,7 +188,7 @@ The Table Model contains:
 - max_seats
 - available
 
-##### Contact Model 
+#### Contact Model 
 
 The Contact Model contains:
 
@@ -197,3 +197,16 @@ The Contact Model contains:
 - email (FK)
 - phone (FK)
 - message
+
+## Technologies Used 
+
+### Languages & Frameworks
+
+- HTML
+- CSS
+- Javascript
+- Python
+- Django
+
+### Libraries & Tools
+
