@@ -1,14 +1,22 @@
+# Imports
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# 3rd party:
 from django.db import models
 from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 from django.utils import timezone
+# Internal
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 class RestaurantTable(models.Model):
+    """
+    Model representing a restaurant table
+    """
     name = models.CharField(max_length=50, unique=True)
     max_seats = models.IntegerField()
     available = models.BooleanField(default=True)
-    
+
     def __str__(self):
         return self.name
 
@@ -16,6 +24,7 @@ class RestaurantTable(models.Model):
         return self.booking_set.filter(requested_date=date, requested_time=timeslot).exists()
 
 
+# Choices for different time slots
 class TimeSlots(models.TextChoices):
     SLOT_1 = '12:00', '12:00 PM'
     SLOT_2 = '13:15', '1:15 PM'
@@ -30,6 +39,9 @@ class TimeSlots(models.TextChoices):
 
 
 class Booking(models.Model):
+    """
+    Model to represent a booking for a restaurant table
+    """
     class BookingStatus(models.TextChoices):
         PENDING = 'PN', 'Pending'
         CONFIRMED = 'CF', 'Confirmed'
@@ -57,5 +69,3 @@ class Booking(models.Model):
 
     def __str__(self):
         return f'{self.table.name} - {self.guest.username}'
-
-

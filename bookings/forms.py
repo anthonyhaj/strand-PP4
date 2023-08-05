@@ -1,10 +1,19 @@
+# Imports
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# 3rd party:
 from django import forms
 from django.core.exceptions import ValidationError
 from datetime import date, datetime, time
-from .models import Booking, RestaurantTable, TimeSlots
 from django.utils import timezone
+# Internal
+from .models import Booking, RestaurantTable, TimeSlots
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 
 class BookingForm(forms.ModelForm):
+    """
+    Form for booking a table
+    """
     name = forms.CharField(max_length=50)
     email = forms.EmailField()
     phone_number = forms.CharField(max_length=15)
@@ -14,6 +23,9 @@ class BookingForm(forms.ModelForm):
     table = forms.ModelChoiceField(queryset=RestaurantTable.objects.all())
 
     class Meta:
+        """
+        Meta class to specify the associated model and its fields
+        """
         model = Booking
         fields = ['name', 'email', 'phone_number', 'requested_date', 'requested_time', 'guest_count', 'table']
 
@@ -23,6 +35,9 @@ class BookingForm(forms.ModelForm):
         self.fields['table'].choice_field = True
 
     def clean(self):
+        """
+        Perform form data validation and cleaning
+        """
         cleaned_data = super().clean()
 
         requested_date = cleaned_data.get('requested_date')

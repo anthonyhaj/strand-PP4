@@ -10,7 +10,9 @@ from .forms import RegisterForm
 
 
 def register(request):
-    """Register new user. Handles user registration using the RegisterForm."""
+    """
+    Register new user. Handles user registration using the RegisterForm.
+    """
     if request.method == "POST":
         form = RegisterForm(request.POST)
         if form.is_valid():
@@ -23,12 +25,16 @@ def register(request):
 
 
 def register_success(request):
-    """Renders a success page after a user has successfully registered."""
+    """
+    Renders a success page after a user has successfully registered.
+    """
     return render(request, 'success.html')
 
 
 def login_view(request):
-    """User login view. Handles user authentication and login."""
+    """
+    User login view. Handles user authentication and login.
+    """
     if request.method == 'POST':
         username = request.POST['username']
         password = request.POST['password']
@@ -43,8 +49,10 @@ def login_view(request):
 
 
 def logout_confirm(request):
-    """Logout confirmation view. Logs out the user when the
-    confirmation form is submitted."""
+    """
+    Logout confirmation view. Logs out the user when the
+    confirmation form is submitted
+    """
     if request.method == "POST":
         logout(request)
         return redirect('accounts:logout_confirmed')
@@ -52,6 +60,8 @@ def logout_confirm(request):
 
 
 def logout_confirmed(request):
-    """Logout confirmation success view. Renders a page confirming
-    the successful logout."""
+    """
+    Logout confirmation success view. Renders a page confirming
+    the successful logout
+    """
     return render(request, 'accounts/logout_confirmed.html')
