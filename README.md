@@ -17,13 +17,11 @@
     - [Structure](#structure)
       - [Website pages](#website-pages)
       - [Database](#database)
-    - [Wireframes](#wireframes)
   - [Technologies Used](#technologies-used)
   - [Features](#features)
   - [Validation](#validation)
   - [Testing](#testing)
     - [Manual testing](#manual-testing)
-    - [Automated testing](#automated-testing)
     - [Tests on various devices](#tests-on-various-devices)
     - [Browser compatibility](#browser-compatibility)
   - [Bugs](#bugs)
@@ -92,14 +90,110 @@ create an account, see the menu, or contact the business.
 
 ### Colors
 
-- The colors a chose consist of dark grays and gold keeping the colors balanced and contrasted well
+- The colors I chose consist of dark grays and gold keeping the colors balanced and contrasted well
 as a dark theme
 
 <details><summary>See color pallet</summary>
 <img src="docs/palette.png">
 </details>
 
+### Fonts
 
+- The fonts used were the default Montserrat and sans-serif
 
+### Structure
 
+The site was structured using a basic logo and navigation layout showing all relevant links
+and hamburger menu for smaller devices. The footer consists of 3 social media links
 
+#### Pages
+- Home page with a welcome message, carousel of restaurant images, how to find us section
+and contact information/opening hours
+- Menu page with all food and drink items shown in cards and sorted by type retrieved from
+the database
+- Book a Table page where logged in user can fill a form for booking a table at the restaurant
+and if a user is not logged in then login_required page will ask user to log in to book
+- My bookings page displays all current users bookings and allows user to change or 
+cancel a booking they have made
+- Change booking page shows a form in which allows the user can change their booking information
+- Cancel booking page allows a user to delete a booking they have made and also from the database
+- Contact Us page allows a user to submit a contact form with a message with a where to find us and 
+contact information/opening hours below the form
+- Register page allows the user to register for an account in order to book a table
+- Log In page allows user to log into their account to interact with bookings
+
+#### Database
+- Built with Python and Django with a Postgres database
+- Database schema created using dbdiagram.io
+
+<details><summary>See diagram</summary>
+<img src="docs/db-schema.png">
+</details>
+
+##### User Model
+
+The User Model contains:
+
+- user_id
+- password
+- last_login
+- is_superuser
+- username
+- first_name
+- last_name
+- email
+- is_staff
+- is_active
+- date_joined
+
+##### FoodItem Model
+
+The FoodItem Model contains
+
+- id 
+- food_name
+- description
+- type
+- price
+
+##### DrinkItem Model
+
+The DrinkItem Model contains:
+
+- id 
+- food_name
+- description
+- type
+- price
+
+##### Booking Model
+
+The Booking Model contains:
+
+- booking_id (PK)
+- created_date
+- requested_date
+- requested_time
+- table (FK)
+- guest (FK)
+- seats
+- guest_count
+
+##### Table Model
+
+The Table Model contains:
+
+- id (PK)
+- table_name
+- max_seats
+- available
+
+##### Contact Model 
+
+The Contact Model contains:
+
+- id (PK)
+- name (FK)
+- email (FK)
+- phone (FK)
+- message
