@@ -54,8 +54,16 @@ def change_booking(request, booking_id):
             form.save()
             return redirect('bookings:mybookings') 
     else:
-        form = BookingForm(instance=booking)
+        initial_data = {
+            'name': booking.name,
+            'email': booking.email,
+            'phone_number': booking.phone_number,
+            'requested_date': booking.requested_date.strftime("%Y-%m-%d") if booking.requested_date else None,
+            'requested_time': booking.requested_time,
+            'guest_count': booking.guest_count,
+            'table': booking.table.id
+        }
+        form = BookingForm(instance=booking, initial=initial_data)
 
     return render(request, 'bookings/change_booking.html', {'form': form, 'booking': booking})
-
 
