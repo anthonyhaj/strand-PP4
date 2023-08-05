@@ -1,5 +1,4 @@
 {% extends 'base.html' %}
-
 {% load static %}
 
 {% block content %}
@@ -8,6 +7,7 @@
     <div class="row">
         <div class="col-md-12 text-center">
             <h1>Welcome to Strand Restaurant</h1>
+            <!-- Description of the restaurant -->
             <p class="mt-3">
                 Nestled in the heart of the city, our restaurant offers an unforgettable dining experience. Indulge in a
                 culinary journey where every dish is a harmony of flavors, meticulously crafted from the finest, locally
@@ -22,11 +22,13 @@
 <!-- Hero Carousel -->
 <div class="container-fluid p-0 mb-4">
     <div id="heroCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
         <ol class="carousel-indicators">
             <li data-target="#heroCarousel" data-slide-to="0" class="active"></li>
             <li data-target="#heroCarousel" data-slide-to="1"></li>
             <li data-target="#heroCarousel" data-slide-to="2"></li>
         </ol>
+        <!-- Slides -->
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img src="{% static 'img/hero1.jpg' %}" class="d-block w-100" alt="First slide">
@@ -38,6 +40,7 @@
                 <img src="{% static 'img/hero3.jpg' %}" class="d-block w-100" alt="Third slide">
             </div>
         </div>
+        <!-- Controls -->
         <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
@@ -54,6 +57,7 @@
         <div class="col-md-12 text-center">
             <h2>How to Find Us:</h2>
             <hr>
+            <!-- Google Maps iframe -->
             <div id="map" class="mt-3">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2131.416459261838!2d11.963091376733372!3d57.709383339620445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464ff3614c23a6ff%3A0xbf8a705e123decab!2sKl%C3%A4dpressaregatan%208-2%2C%20411%2005%20G%C3%B6teborg!5e0!3m2!1sen!2sse!4v1690837386007!5m2!1sen!2sse"
@@ -63,17 +67,20 @@
         </div>
     </div>
 </div>
+<!-- Contact Information Card -->
 <div class="row justify-content-center">
     <div class="col-lg-6" style="margin-bottom: 40px;">
         <div class="card custom-bg-color text-white mx-auto d-block">
             <div class="card-body">
                 <h5 class="card-title">Contact Information and Opening Hours</h5>
                 <p class="card-text">
+                    <!-- Display contact details -->
                     <strong>Strand Restaurant</strong><br>
                     Klädpressaregatan 8-2, 411 05 Göteborg, Sweden<br>
                     Email: info@strandrestaurant.com<br>
                     Phone: +46 31 123 4567<br>
                     <hr>
+                    <!-- Display opening hours -->
                     <strong>Opening Hours:</strong><br>
                     Monday - Friday: 11am - 12pm<br>
                     Saturday - Sunday: 10am - 12pm<br>

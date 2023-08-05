@@ -1,16 +1,20 @@
 {% extends "base.html" %}
 {% block content %}
 <div class="container">
+    <!-- Page Title -->
     <h1 class="mt-5 text-center">Menu</h1>
     <hr>
+    <!-- Food Section -->
     <h2 class="mt-4">Food</h2>
-
+    <!-- Appetizers -->
     <h3 class="text-center">Appetizers</h3>
     <div class="row">
+        <!-- Loop through appetizers -->
         {% for food in appetizers %}
         <div class="col-lg-4 mb-4">
             <div class="card h-100 bg-gray border-color">
                 <div class="card-body">
+                    <!-- Display appetizer details -->
                     <h5 class="card-title">{{ food.name }}</h5>
                     <p class="card-text">{{ food.description }}</p>
                     <p class="card-text">${{ food.price }}</p>
@@ -22,12 +26,15 @@
         {% endfor %}
     </div>
     <hr>
+    <!-- Main Courses -->
     <h3 class="text-center">Main Courses</h3>
     <div class="row">
+        <!-- Loop through main courses -->
         {% for food in main_courses %}
         <div class="col-lg-4 mb-4">
             <div class="card h-100 bg-gray border-color">
                 <div class="card-body">
+                    <!-- Display main course details -->
                     <h5 class="card-title">{{ food.name }}</h5>
                     <p class="card-text">{{ food.description }}</p>
                     <p class="card-text">${{ food.price }}</p>
@@ -39,12 +46,15 @@
         {% endfor %}
     </div>
     <hr>
+    <!-- Desserts -->
     <h3 class="text-center">Desserts</h3>
     <div class="row">
+        <!-- Loop through desserts -->
         {% for food in desserts %}
         <div class="col-lg-4 mb-4">
             <div class="card h-100 bg-gray border-color">
                 <div class="card-body">
+                    <!-- Display dessert details -->
                     <h5 class="card-title">{{ food.name }}</h5>
                     <p class="card-text">{{ food.description }}</p>
                     <p class="card-text">${{ food.price }}</p>
@@ -56,14 +66,17 @@
         {% endfor %}
     </div>
     <hr>
+    <!-- Drinks Section -->
     <h2 class="mt-4">Drinks</h2>
-
+    <!-- Soft Drinks -->
     <h3 class="text-center">Soft Drinks</h3>
     <div class="row">
+        <!-- Loop through soft drinks -->
         {% for drink in soft_drinks %}
         <div class="col-lg-4 mb-4">
             <div class="card h-100 bg-gray border-color">
                 <div class="card-body">
+                    <!-- Display soft drink details -->
                     <h5 class="card-title">{{ drink.name }}</h5>
                     <p class="card-text">{{ drink.description }}</p>
                     <p class="card-text">${{ drink.price }}</p>
@@ -74,13 +87,15 @@
         <p>No soft drinks available at the moment.</p>
         {% endfor %}
     </div>
-
+    <!-- Wines -->
     <h3 class="text-center">Wines</h3>
     <div class="row">
+        <!-- Loop through wines -->
         {% for drink in wines %}
         <div class="col-lg-4 mb-4">
             <div class="card h-100 bg-gray border-color">
                 <div class="card-body">
+                    <!-- Display wine details -->
                     <h5 class="card-title">{{ drink.name }}</h5>
                     <p class="card-text">{{ drink.description }}</p>
                     <p class="card-text">${{ drink.price }}</p>
@@ -91,13 +106,15 @@
         <p>No wines available at the moment.</p>
         {% endfor %}
     </div>
-
+    <!-- Beers -->
     <h3 class="text-center">Beers</h3>
     <div class="row">
+        <!-- Loop through beers -->
         {% for drink in beers %}
         <div class="col-lg-4 mb-4">
             <div class="card h-100 bg-gray border-color">
                 <div class="card-body">
+                    <!-- Display beer details -->
                     <h5 class="card-title">{{ drink.name }}</h5>
                     <p class="card-text">{{ drink.description }}</p>
                     <p class="card-text">${{ drink.price }}</p>
@@ -108,6 +125,5 @@
         <p>No beers available at the moment.</p>
         {% endfor %}
     </div>
-
 </div>
 {% endblock content %}
