@@ -71,6 +71,18 @@ create an account, see the menu, or contact the business.
 14. As a **User**, I want to **be able to cancel a booking that I have made**
 15. As a **user**, I want **know if I have successfully logged out of my account** 
 
+### Admin
+
+16. As an **Admin**, I want to **be able to log in to the admin interface** so that **I can interact with my app data.**
+17. As a **Admin**, I want to **confirm or reject online booking requests** so that **I can manage the restaurant's seating capacity.**
+18. As an **Admin**, I want to be able to **create, update, read, and delete** the menu items so that **customers can see current menu and prices**
+19. As a **Admin**, I want to **see when a user has submited a contact form with user information and message** so that **I can contact the user**
+
+### Site Owner
+20. As a **Site Owner**, I can **ensure that my site is fully responsive** so that **it can be used across all devices**
+21. As a **Site Owner**, I can **ensure that my site has data validation** so that **all submitted data is validated to avoid errors**
+
+
 
 
 
