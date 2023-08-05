@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from .forms import BookingForm
 from .models import Booking
 from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 
 @login_required
 def book(request):
@@ -38,6 +39,7 @@ def delete_booking(request, booking_id):
 
     if request.method == "POST":
         booking.delete()
+        messages.success(request, "Your booking was successfully cancelled.")
         return redirect('bookings:mybookings')
     else:
         return render(request, 'bookings/confirm_delete.html', {'booking': booking})
