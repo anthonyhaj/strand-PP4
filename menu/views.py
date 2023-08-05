@@ -1,8 +1,16 @@
+# Imports
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# 3rd party:
+# Internal:
 from django.shortcuts import render
 from .models import FoodItem, DrinkItem, FOOD_TYPES, DRINK_TYPES
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 def menu(request):
+    """
+    View function to display the menu page
+    """
     appetizers = FoodItem.objects.filter(type=1)
     main_courses = FoodItem.objects.filter(type=2)
     desserts = FoodItem.objects.filter(type=3)
