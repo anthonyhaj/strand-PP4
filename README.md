@@ -307,6 +307,20 @@ on this page
 <img src="docs/features/mybook3-feature.png">
 </details>
 
+### Contact Us page
+- Contains a form where the user may submit to get in contact with the 
+business, including a message
+- This page also contact a how to find us and business contact information
+as well as opening hours
+
+<details><summary>See Feature</summary>
+<img src="docs/features/contact1-feature.png">
+<img src="docs/features/contact2-feature.png">
+</details>
+
+## Validation
+
+
 
 
 
