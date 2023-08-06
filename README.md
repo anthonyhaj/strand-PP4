@@ -247,6 +247,22 @@ and Login
 <img src="docs/features/nav3-feature.png">
 </details>
 
+### Footer
+- Consists of 3 social media buttons for github, twitter,
+and instagram
+
+<details><summary>See Feature</summary>
+<img src="docs/features/footer-feature.png">
+</details>
+
 ### Menu page
 
+- Displays all food and drink items on the menu
+- Food items are first sorted by type for appetizers, main courses,
+and desserts
+- Drink items are second sorted by type for soft drinks, wines, and beers
+- Admins can create, view, add, or delete menu items from the admin panel
 
+<details><summary>See Feature</summary>
+<img src="docs/features/menu-feature.png">
+</details>
