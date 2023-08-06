@@ -126,7 +126,7 @@ contact information/opening hours below the form
 - Built with Python and Django with a Postgres database
 - Database schema created using dbdiagram.io
 
-<details><summary>See diagram</summary>
+<details><summary>See Diagram</summary>
 <img src="docs/db-schema.png">
 </details>
 
@@ -222,3 +222,31 @@ The Contact Model contains:
 - Heroku 
 - jQuery
 - Postgres
+
+## Features
+
+### Home page
+
+- Home page contains navigation bar, a body, 3 containers, and a footer
+
+<details><summary>See Feature</summary>
+<img src="docs/features/home-feature.png">
+</details>
+
+### Navigation bar
+- Consists of Home, Menu, Book a Table, Contact Us, Register, and Login
+- If user is logged in then Log out and, My bookings is displayed instead of Register 
+and Login 
+- Log in status displayed in when logged in
+- Custom logo for the business
+- On smaller devices switches to hamburger menu
+
+<details><summary>See Feature</summary>
+<img src="docs/features/nav1-feature.png">
+<img src="docs/features/nav2-feature.png">
+<img src="docs/features/nav3-feature.png">
+</details>
+
+### Menu page
+
+
