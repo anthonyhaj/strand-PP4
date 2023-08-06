@@ -756,3 +756,47 @@ https://strand-pp4-d640c87ff185.herokuapp.com/
 <br>
 <hr>
 
+16. As an **Admin**, I want to **be able to log in to the admin interface** so that **I can interact with my app data.**
+15. As a **User**, I want **know if I have successfully logged out of my account** 
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| Visit the admin page https://strand-pp4-d640c87ff185.herokuapp.com/admin/  | Admin page Login will load | Works as expected |
+| Enter admin login username and password | Logs user into the django admin database | Works as expected |
+
+<details><summary>See here</summary>
+<img src="docs/testing/userstory16.png">
+</details>
+<br>
+<hr>
+
+17. As a **Admin**, I want to **confirm or reject online booking requests** so that **I can manage the restaurant's seating capacity.**
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| Visit the admin page https://strand-pp4-d640c87ff185.herokuapp.com/admin/  | Admin page Login will load | Works as expected |
+| Click on Bookings and choose one to view | Loads page containing all bookings made | Works as expected |
+| Click Status to change status and click save | Changes booking status for the user | Works as expected |
+
+<details><summary>See here</summary>
+<img src="docs/testing/userstory17a.png">
+<img src="docs/testing/userstory17b.png">
+<img src="docs/testing/userstory17c.png">
+</details>
+<br>
+<hr>
+
+18. As an **Admin**, I want to be able to **create, update, read, and delete** the menu items so that **customers can see current menu and prices**
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| Visit the admin page https://strand-pp4-d640c87ff185.herokuapp.com/admin/  | Admin page Login will load | Works as expected |
+| Click on Food Items or Drink Items  and choose one to view | Loads page containing all Food or Drink items made | Works as expected |
+| Click on add Food or Drink Item or checkboxes to delete items | Create or delete a new menu item | Works as expected |
+
+<details><summary>See here</summary>
+<img src="docs/testing/userstory18a.png">
+<img src="docs/testing/userstory18b.png">
+</details>
+<br>
+<hr>
