@@ -28,11 +28,13 @@
                     <label for="{{ field.id_for_label }}">{{ field.label }}</label>
                     <!-- Render textarea for text fields and input for other fields -->
                     {% if field.field.widget.input_type == 'textarea' %}
-                    <textarea class="form-control" id="{{ field.auto_id }}" name="{{ field.name }}"
-                        required>{{ field.value|default:'' }}</textarea>
+                    <textarea class="form-control" id="{{ field.auto_id }}" name="{{ field.name }}" required
+                        aria-label="{{ field.label }}"
+                        aria-describedby="{{ field.id_for_label }}-help">{{ field.value|default:'' }}</textarea>
                     {% else %}
                     <input type="{{ field.field.widget.input_type }}" class="form-control" id="{{ field.auto_id }}"
-                        name="{{ field.name }}" value="{{ field.value|default:'' }}" required>
+                        name="{{ field.name }}" value="{{ field.value|default:'' }}" required
+                        aria-label="{{ field.label }}" aria-describedby="{{ field.id_for_label }}-help">
                     {% endif %}
                 </div>
                 {% endfor %}
@@ -43,7 +45,7 @@
             </form>
             <!-- Display form errors, if any -->
             {% if form.errors %}
-            <div class="alert alert-danger mt-3">{{ form.errors }}</div>
+            <div class="alert alert-danger mt-3" role="alert">{{ form.errors }}</div>
             {% endif %}
         </div>
     </div>

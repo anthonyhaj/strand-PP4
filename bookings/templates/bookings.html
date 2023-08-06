@@ -18,7 +18,7 @@
     <div class="row justify-content-center">
         <div class="col-lg-5 custom-bg-color text-white rounded">
             <h2 class="text-center my-4">Booking information</h2>
-            <form method="POST" class="mb-5">
+            <form method="POST" class="mb-5" title="Book a table form">
                 {% csrf_token %}
                 <!-- This loops through each field in the form -->
                 {% for field in form %}
@@ -39,15 +39,17 @@
                     {% elif field.name == "requested_date" %}
                     <!-- If the current field is the "requested_date", it creates a date input field -->
                     <input type="date" class="form-control" id="{{ field.auto_id }}" name="{{ field.name }}"
-                        value="{{ field.value|default:'' }}" />
+                        value="{{ field.value|default:'' }}" aria-label="Requested Date"
+                        aria-describedby="requested-date-help" />
                     {% else %}
                     <!-- For all other fields, it creates a standard input field -->
                     <input type="{{ field.field.widget.input_type }}" class="form-control" id="{{ field.auto_id }}"
-                        name="{{ field.name }}" value="{{ field.value|default:'' }}" />
+                        name="{{ field.name }}" value="{{ field.value|default:'' }}" aria-label="{{ field.label }}"
+                        aria-describedby="{{ field.id_for_label }}" />
                     {% endif %}
                     <!-- If there is help text for the field, it is displayed below the input -->
                     {% if field.help_text %}
-                    <small class="form-text text-muted">{{ field.help_text }}</small>
+                    <small class="form-text text-muted" id="{{ field.id_for_label }}-help">{{ field.help_text }}</small>
                     {% endif %}
                     <!-- If there are any validation errors for the field, they are displayed in an alert box -->
                     {% for error in field.errors %}
