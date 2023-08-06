@@ -320,8 +320,45 @@ as well as opening hours
 
 ## Validation
 
+### The W3C Markup Validation Service
 
+<details><summary>Home page</summary>
+<img src="docs/validation/home-validation.png">
+</details>
 
+<details><summary>Menu page</summary>
+<img src="docs/validation/menu-validation.png">
+</details>
 
+<details><summary>Register page</summary>
+<img src="docs/validation/-validation.png">
+</details>
 
+<details><summary>Login page</summary>
+<img src="docs/validation/login-validation.png">
+</details>
+
+<details><summary>Logout page</summary>
+<img src="docs/validation/logout-validation.png">
+</details>
+
+<details><summary>Book a Table page</summary>
+<img src="docs/validation/book-validation.png">
+</details>
+
+<details><summary>My Bookings page</summary>
+<img src="docs/validation/mybook-validation.png">
+</details>
+
+<details><summary>Change Booking page</summary>
+<img src="docs/validation/changebook-validation.png">
+</details>
+
+<details><summary>Delete Booking page</summary>
+<img src="docs/validation/deletebook-validation.png">
+</details>
+
+<details><summary>Contact Us page</summary>
+<img src="docs/validation/contact-validation.png">
+</details>
 

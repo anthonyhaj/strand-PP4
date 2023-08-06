@@ -26,7 +26,7 @@
                     <label for="{{ field.id_for_label }}">{{ field.label }}</label>
                     <!-- Create an input field based on the field type -->
                     <input type="{{ field.field.widget.input_type }}" class="form-control" id="{{ field.auto_id }}"
-                        name="{{ field.name }}" value="{{ field.value|default:'' }}" />
+                        name="{{ field.name }}" value="{{ field.value|default:'' }}">
 
                     <!-- Display field errors if there are any -->
                     {% if field.errors %}
