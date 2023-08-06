@@ -861,3 +861,14 @@ Tested Devices with Browsers:
 3. Copy HTTPS link to clone
 4. On git bash change current directory to desired clone directory
 5. Type git clone and paste URL and press enter
+
+## Credits
+
+### Images
+ - Images were sourced from Pexels
+### Code
+- Code was written by me using HTML, CSS, Javascript, Python, and Django
+
+## Acknowledgements
+- I would like to thank my mentor Mo Shami for his wonderful support 
+- I would like to thank my family for their support through my coding journey
