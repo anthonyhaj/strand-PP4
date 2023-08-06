@@ -800,3 +800,30 @@ https://strand-pp4-d640c87ff185.herokuapp.com/
 </details>
 <br>
 <hr>
+
+19. As a **Admin**, I want to **see when a user has submited a contact form with user information and message** so that **I can contact the user**
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| Visit the admin page https://strand-pp4-d640c87ff185.herokuapp.com/admin/  | Admin page Login will load | Works as expected |
+| Click on Contact | Loads page containing all contact forms submitted | Works as expected |
+
+<details><summary>See here</summary>
+<img src="docs/testing/userstory19a.png">
+<img src="docs/testing/userstory19b.png">
+</details>
+<br>
+<hr>
+
+### Tests on various devices
+
+Tested Devices with Browsers:
+- iPhone 12 Pro
+- iPad Mini
+- Lenovo thinkpad (PC)
+  - Microsoft Edge
+  - Google Chrome
+  - Firefox
+
+
+
