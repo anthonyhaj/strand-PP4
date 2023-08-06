@@ -56,18 +56,18 @@ create an account, see the menu, or contact the business.
 1. As a **User** I can **use the navbar, footer, and social icons** so that I can **navigate the business site**
 2. As a **User**, I want to **be able to contact the business using a form** so that **the business can see my contact information and message**
 3. As a **User**, I want to see the **restaurant's opening hours and location** so that I can **plan my visit.**
-4. As a **user**, I want to see the **menu page** so that **I can explore the dishes offered by the restaurant**
-5. As a **user**, I want to **create an account** so that **I can make a booking.**
-6. As a **user**, I want to **log in to my account** to **manage my bookings and personal details.**
-7. As a **user**, I want to **see my login status (logged in or logged out) and who I am logged in as (username or email) displayed on the website**, so I can **easily understand my current session status**
+4. As a **User**, I want to see the **menu page** so that **I can explore the dishes offered by the restaurant**
+5. As a **User**, I want to **create an account** so that **I can make a booking.**
+6. As a **User**, I want to **log in to my account** to **manage my bookings and personal details.**
+7. As a **User**, I want to **see my login status (logged in or logged out) and who I am logged in as (username or email) displayed on the website**, so I can **easily understand my current session status**
 8. As a **User**, I want to **book a table** so that **I can ensure I have a place at a convenient time.**
 9. As a **User**, I cannot **choose a past date while booking** so that **a booking is on a valid date**
 10. As a **User**, I am **notified** so that **I know my booking has been booked successfully**
-11. As a **user**, I want to **be able to view a booking I have already made** so that **I can see my booking information**
-12. As a **user**, I want to **modify my booking details (like time, date, or number of guests)** so that I can **change my plans if needed.**
+11. As a **User**, I want to **be able to view a booking I have already made** so that **I can see my booking information**
+12. As a **User**, I want to **modify my booking details (like time, date, or number of guests)** so that I can **change my plans if needed.**
 13. As a **User**, I am **notified when changing my booking information** so that **I know it has been changed successfully**
 14. As a **User**, I want to **be able to cancel a booking that I have made**
-15. As a **user**, I want **know if I have successfully logged out of my account** 
+15. As a **User**, I want **know if I have successfully logged out of my account** 
 
 ### Admin
 
@@ -595,7 +595,7 @@ https://strand-pp4-d640c87ff185.herokuapp.com/
 <br>
 <hr>
 
-4. As a **user**, I want to see the **menu page** so that **I can explore the dishes offered by the restaurant**
+4. As a **User**, I want to see the **menu page** so that **I can explore the dishes offered by the restaurant**
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -607,7 +607,7 @@ https://strand-pp4-d640c87ff185.herokuapp.com/
 <br>
 <hr>
 
-5. As a **user**, I want to **create an account** so that **I can make a booking.**
+5. As a **User**, I want to **create an account** so that **I can make a booking.**
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -615,6 +615,143 @@ https://strand-pp4-d640c87ff185.herokuapp.com/
 
 <details><summary>See here</summary>
 <img src="docs/testing/userstory5.png">
+</details>
+<br>
+<hr>
+
+6. As a **User**, I want to **log in to my account** to **manage my bookings and personal details.**
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| Click any the Login link in the navigation bar | Login page will load with Login form | Works as expected |
+
+<details><summary>See here</summary>
+<img src="docs/testing/userstory6.png">
+</details>
+<br>
+<hr>
+
+7. As a **User**, I want to **see my login status (logged in or logged out) and who I am logged in as (username or email) displayed on the website**, so I can **easily understand my current session status**
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| Given user is logged in, username will show in nav bar showing logged in status | "Logged in as: " will show in the nav bar when logged in | Works as expected |
+
+<details><summary>See here</summary>
+<img src="docs/testing/userstory7.png">
+</details>
+<br>
+<hr>
+
+8. As a **User**, I want to **book a table** so that **I can ensure I have a place at a convenient time.**
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| Given user is logged in, click on Book a Table in the nav bar | If logged in shows a book a table form otherwise asks user to log in in order to book | Works as expected |
+
+<details><summary>See here</summary>
+<img src="docs/testing/userstory8a.png">
+<img src="docs/testing/userstory8b.png">
+</details>
+<br>
+<hr>
+
+9. As a **User**, I cannot **choose a past date while booking** so that **a booking is on a valid date**
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| Given user is logged in, click on Book a Table in the nav bar | Booking form will load | Works as expected |
+| Fill in booking information | Error will appear when trying to submit form | Works as expected |
+
+<details><summary>See here</summary>
+<img src="docs/testing/userstory9.png">
+</details>
+<br>
+<hr>
+
+10. As a **User**, I am **notified** so that **I know my booking has been booked successfully**
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| Given user is logged in, click on Book a Table in the nav bar | Booking form will load | Works as expected |
+| Fill in booking information | Fill form | Works as expected |
+| Click on the book button | Submits form redirects user to a success page with buttons | Works as expected |
+
+<details><summary>See here</summary>
+<img src="docs/testing/userstory10a.png">
+<img src="docs/testing/userstory10b.png">
+</details>
+<br>
+<hr>
+
+11. As a **User**, I want to **be able to view a booking I have already made** so that **I can see my booking information**
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| Given user is logged in, click on My Bookings in the nav bar | My Booking page will load | Works as expected |
+
+<details><summary>See here</summary>
+<img src="docs/testing/userstory11.png">
+</details>
+<br>
+<hr>
+
+12. As a **User**, I want to **modify my booking details (like time, date, or number of guests)** so that I can **change my plans if needed.**
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| Given user is logged in, click on My Bookings in the nav bar | My Booking page will load | Works as expected |
+| Click on the change button on a booking | Change booking page will load with pre-filled form | Works as expected |
+| Click on the Saves Changes button | Saves changes and redirects to My Bookings page | Works as expected |
+
+<details><summary>See here</summary>
+<img src="docs/testing/userstory12a.png">
+<img src="docs/testing/userstory12b.png">
+</details>
+<br>
+<hr>
+
+13. As a **User**, I am **notified when changing my booking information** so that **I know it has been changed successfully**
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| Given user is logged in, click on My Bookings in the nav bar | My Booking page will load | Works as expected |
+| Click on the change button on a booking | Change booking page will load with pre-filled form | Works as expected |
+| Click on the Saves Changes button | Saves changes and redirects to My Bookings page and success message is shown to the user | Works as expected |
+
+<details><summary>See here</summary>
+<img src="docs/testing/userstory13.png">
+</details>
+<br>
+<hr>
+
+14. As a **User**, I want to **be able to cancel a booking that I have made**
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| Given user is logged in, click on My Bookings in the nav bar | My Booking page will load | Works as expected |
+| Click on the cancel button on a booking | Cancel booking page will load asking if user would like to delete booking | Works as expected |
+| Click on the Yes, Delete button | Saves changes and redirects to My Bookings page and success message is shown to the user | Works as expected |
+
+<details><summary>See here</summary>
+<img src="docs/testing/userstory14a.png">
+<img src="docs/testing/userstory14b.png">
+<img src="docs/testing/userstory14c.png">
+</details>
+<br>
+<hr>
+
+15. As a **User**, I want **know if I have successfully logged out of my account** 
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| Given user is logged in, click on Logout in the nav bar | A Logout confirmation page will load | Works as expected |
+| Click on the Logout button to Logout | Logs user out and redirects to a success page with button | Works as expected |
+
+<details><summary>See here</summary>
+<img src="docs/testing/userstory15a.png">
+<img src="docs/testing/userstory15b.png">
+<img src="docs/testing/userstory15c.png">
 </details>
 <br>
 <hr>
