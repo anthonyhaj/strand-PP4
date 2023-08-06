@@ -380,32 +380,97 @@ as well as opening hours
 
 #### JSHint JS Validation Service
 
-<details><summary>style.css</summary>
+<details><summary>script.js</summary>
 <img src="docs/validation/js-validation.png">
 </details>
 
 ### Python Validation
 
-#### PEP8 Python Liner Validator
+#### PEP8 Python Linter Validator
 
 ##### Accounts app
 
-<details><summary>apps.py</summary>
-<img src="docs/validation/accounts-appspy-validation.png">
+<details><summary>forms.py</summary>
+<img src="docs/validation/accounts-formspy-validation.png">
 </details>
 
-<details><summary>apps.py</summary>
-<img src="docs/validation/js-validation.png">
+<details><summary>models.py</summary>
+<img src="docs/validation/accounts-modelspy-validation.png">
 </details>
 
-<details><summary>apps.py</summary>
-<img src="docs/validation/js-validation.png">
+<details><summary>urls.py</summary>
+<img src="docs/validation/accounts-urlspy-validation.png">
 </details>
 
-<details><summary>apps.py</summary>
-<img src="docs/validation/js-validation.png">
+<details><summary>views.py</summary>
+<img src="docs/validation/accounts-viewspy-validation.png">
 </details>
 
-<details><summary>apps.py</summary>
-<img src="docs/validation/js-validation.png">
+##### Bookings app
+
+<details><summary>admin.py</summary>
+<img src="docs/validation/bookings-adminpy-validation.png">
 </details>
+
+<details><summary>forms.py</summary>
+<img src="docs/validation/bookings-formspy-validation.png">
+</details>
+
+<details><summary>models.py</summary>
+<img src="docs/validation/bookings-modelspy-validation.png">
+</details>
+
+<details><summary>urls.py</summary>
+<img src="docs/validation/bookings-urlspy-validation.png">
+</details>
+
+<details><summary>views.py</summary>
+<img src="docs/validation/bookings-viewspy-validation.png">
+</details>
+
+##### Home app
+
+<details><summary>urls.py</summary>
+<img src="docs/validation/home-viewspy-validation.png">
+</details>
+
+<details><summary>views.py</summary>
+<img src="docs/validation/home-viewspy-validation.png">
+</details>
+
+##### Menu app
+
+<details><summary>admin.py</summary>
+<img src="docs/validation/menu-adminpy-validation.png">
+</details>
+
+<details><summary>models.py</summary>
+<img src="docs/validation/menu-modelspy-validation.png">
+</details>
+
+<details><summary>urls.py</summary>
+<img src="docs/validation/menu-urlspy-validation.png">
+</details>
+
+<details><summary>views.py</summary>
+<img src="docs/validation/menu-viewspy-validation.png">
+</details>
+
+##### Contact app
+
+<details><summary>admin.py</summary>
+<img src="docs/validation/contact-adminpy-validation.png">
+</details>
+
+<details><summary>models.py</summary>
+<img src="docs/validation/contact-modelspy-validation.png">
+</details>
+
+<details><summary>urls.py</summary>
+<img src="docs/validation/contact-urlspy-validation.png">
+</details>
+
+<details><summary>views.py</summary>
+<img src="docs/validation/contact-viewspy-validation.png">
+</details>
+
