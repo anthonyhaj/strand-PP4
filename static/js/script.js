@@ -1,3 +1,5 @@
+/* jshint esversion: 6 */
+
 document.addEventListener('DOMContentLoaded', (event) => {
     const dateField = document.querySelector('#id_requested_date');
     const today = new Date();

@@ -320,7 +320,9 @@ as well as opening hours
 
 ## Validation
 
-### The W3C Markup Validation Service
+### HTML Validation
+
+#### The W3C Markup Validation Service
 
 <details><summary>Home page</summary>
 <img src="docs/validation/home-validation.png">
@@ -331,7 +333,7 @@ as well as opening hours
 </details>
 
 <details><summary>Register page</summary>
-<img src="docs/validation/-validation.png">
+<img src="docs/validation/register-validation.png">
 </details>
 
 <details><summary>Login page</summary>
@@ -362,3 +364,48 @@ as well as opening hours
 <img src="docs/validation/contact-validation.png">
 </details>
 
+<details><summary>404 page</summary>
+<img src="docs/validation/404-validation.png">
+</details>
+
+### CSS Validation
+
+#### The W3C Jigsaw CSS Validation Service
+
+<details><summary>style.css</summary>
+<img src="docs/validation/css-validation.png">
+</details>
+
+### JavaScript Validation
+
+#### JSHint JS Validation Service
+
+<details><summary>style.css</summary>
+<img src="docs/validation/js-validation.png">
+</details>
+
+### Python Validation
+
+#### PEP8 Python Liner Validator
+
+##### Accounts app
+
+<details><summary>apps.py</summary>
+<img src="docs/validation/accounts-appspy-validation.png">
+</details>
+
+<details><summary>apps.py</summary>
+<img src="docs/validation/js-validation.png">
+</details>
+
+<details><summary>apps.py</summary>
+<img src="docs/validation/js-validation.png">
+</details>
+
+<details><summary>apps.py</summary>
+<img src="docs/validation/js-validation.png">
+</details>
+
+<details><summary>apps.py</summary>
+<img src="docs/validation/js-validation.png">
+</details>
