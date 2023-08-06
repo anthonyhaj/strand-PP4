@@ -529,7 +529,6 @@ https://strand-pp4-d640c87ff185.herokuapp.com/
 <img src="docs/validation/contact-wave.png">
 </details>
 
-
 <details><summary>Login page</summary>
 <img src="docs/validation/login-wave.png">
 </details>
@@ -553,3 +552,70 @@ https://strand-pp4-d640c87ff185.herokuapp.com/
 <details><summary>Delete Bookings page</summary>
 <img src="docs/validation/deletebook-wave.png">
 </details>
+
+## Testing
+
+### Manual User Story Testing
+
+1. As a **User** I can **use the navbar, footer, and social icons** so that I can **navigate the business site**
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| Click any link in the navigation bar | Link chosen will load | Works as expected |
+| Click on the footer links  | link pages will open in new tab | Works as expected |
+
+<details><summary>See here</summary>
+<img src="docs/testing/userstory1a.png">
+<img src="docs/testing/userstory1b.png">
+</details>
+<br>
+<hr>
+
+2. As a **User**, I want to **be able to contact the business using a form** so that **the business can see my contact information and message**
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| Click any the Contact Us link in the navigation bar | Contact page will load showing contact form | Works as expected |
+
+<details><summary>See here</summary>
+<img src="docs/testing/userstory2.png">
+</details>
+<br>
+<hr>
+
+3. 3. As a **User**, I want to see the **restaurant's opening hours and location** so that I can **plan my visit.**
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| Click any the Contact Us link in the navigation bar and scroll to the bottom to view additional information | Find business information on the page | Works as expected |
+
+<details><summary>See here</summary>
+<img src="docs/testing/userstory3.png">
+</details>
+<br>
+<hr>
+
+4. As a **user**, I want to see the **menu page** so that **I can explore the dishes offered by the restaurant**
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| Click any the Menu link in the navigation bar | See the full food and drink menu sorted by type from the database | Works as expected |
+
+<details><summary>See here</summary>
+<img src="docs/testing/userstory4.png">
+</details>
+<br>
+<hr>
+
+5. As a **user**, I want to **create an account** so that **I can make a booking.**
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| Click any the Register link in the navigation bar | Register page will load with register form | Works as expected |
+
+<details><summary>See here</summary>
+<img src="docs/testing/userstory5.png">
+</details>
+<br>
+<hr>
+
