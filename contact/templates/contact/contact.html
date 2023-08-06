@@ -13,7 +13,6 @@
         </div>
     </div>
 </div>
-
 <!-- Message Form -->
 <div class="container" style="margin-bottom: 160px;">
     <div class="row justify-content-center">
@@ -26,15 +25,18 @@
                 <div class="form-group">
                     <!-- Label for each form field -->
                     <label for="{{ field.id_for_label }}">{{ field.label }}</label>
-                    <!-- Render textarea for text fields and input for other fields -->
                     {% if field.field.widget.input_type == 'textarea' %}
                     <textarea class="form-control" id="{{ field.auto_id }}" name="{{ field.name }}" required
-                        aria-label="{{ field.label }}"
-                        aria-describedby="{{ field.id_for_label }}-help">{{ field.value|default:'' }}</textarea>
+                        aria-label="{{ field.label }}" {% if field.help_text %}
+                        aria-describedby="{{ field.auto_id }}-help" {% endif %}>{{ field.value|default:'' }}</textarea>
                     {% else %}
                     <input type="{{ field.field.widget.input_type }}" class="form-control" id="{{ field.auto_id }}"
                         name="{{ field.name }}" value="{{ field.value|default:'' }}" required
-                        aria-label="{{ field.label }}" aria-describedby="{{ field.id_for_label }}-help">
+                        aria-label="{{ field.label }}" {% if field.help_text %}
+                        aria-describedby="{{ field.auto_id }}-help" {% endif %}>
+                    {% endif %}
+                    {% if field.help_text %}
+                    <span id="{{ field.auto_id }}-help" class="form-text">{{ field.help_text }}</span>
                     {% endif %}
                 </div>
                 {% endfor %}
