@@ -266,3 +266,48 @@ and desserts
 <details><summary>See Feature</summary>
 <img src="docs/features/menu-feature.png">
 </details>
+
+### Register page
+
+- Contains form for users to register an account
+- All fields are required for registration
+
+<details><summary>See Feature</summary>
+<img src="docs/features/register-feature.png">
+</details>
+
+### Login page
+- User can login here to book or view bookings 
+
+<details><summary>See Feature</summary>
+<img src="docs/features/login-feature.png">
+</details>
+
+### Book a Table page
+- Contains a booking form where user can fill
+- All data user enters is validated to avoid booking in the past etc.
+- If user is not logged in then they will be asked to log in to book 
+a table
+
+<details><summary>See Feature</summary>
+<img src="docs/features/book1-feature.png">
+<img src="docs/features/book2-feature.png">
+</details>
+
+### My Bookings page
+- Users will be able to view, change, or delete their bookings 
+on this page
+- Bookings are shown in cards with buttons for changing or deleting
+- Change buttons redirects user to a form to change their booking
+- Cancel button redirects user to confirm if they want to delete their booking
+
+<details><summary>See Feature</summary>
+<img src="docs/features/mybook1-feature.png">
+<img src="docs/features/mybook2-feature.png">
+<img src="docs/features/mybook3-feature.png">
+</details>
+
+
+
+
+
