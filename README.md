@@ -512,3 +512,44 @@ https://strand-pp4-d640c87ff185.herokuapp.com/
 <details><summary>Delete Bookings page</summary>
 <img src="docs/validation/deletebook-lighthouse.png">
 </details>
+
+### Wave
+
+-Accessibility was tested using WAVE
+
+<details><summary>Index/Home page</summary>
+<img src="docs/validation/home-wave.png">
+</details>
+
+<details><summary>Menu page</summary>
+<img src="docs/validation/menu-wave.png">
+</details>
+
+<details><summary>Contact Us page</summary>
+<img src="docs/validation/contact-wave.png">
+</details>
+
+
+<details><summary>Login page</summary>
+<img src="docs/validation/login-wave.png">
+</details>
+
+<details><summary>Logout page</summary>
+<img src="docs/validation/logout-wave.png">
+</details>
+
+<details><summary>Book a Table page</summary>
+<img src="docs/validation/book-wave.png">
+</details>
+
+<details><summary>My Bookings page</summary>
+<img src="docs/validation/mybook-wave.png">
+</details>
+
+<details><summary>Change Bookings page</summary>
+<img src="docs/validation/changebook-wave.png">
+</details>
+
+<details><summary>Delete Bookings page</summary>
+<img src="docs/validation/deletebook-wave.png">
+</details>
