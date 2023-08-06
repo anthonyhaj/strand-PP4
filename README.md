@@ -479,3 +479,36 @@ https://strand-pp4-d640c87ff185.herokuapp.com/
 <details><summary>Index/Home page</summary>
 <img src="docs/validation/home-lighthouse.png">
 </details>
+
+<details><summary>Menu page</summary>
+<img src="docs/validation/menu-lighthouse.png">
+</details>
+
+<details><summary>Contact Us page</summary>
+<img src="docs/validation/contact-lighthouse.png">
+</details>
+
+<details><summary>Login page</summary>
+<img src="docs/validation/login-lighthouse.png">
+</details>
+
+<details><summary>Logout page</summary>
+<img src="docs/validation/logout-lighthouse.png">
+</details>
+
+<details><summary>Book a Table page</summary>
+<img src="docs/validation/book1-lighthouse.png">
+<img src="docs/validation/book2-lighthouse.png">
+</details>
+
+<details><summary>My Bookings page</summary>
+<img src="docs/validation/mybook-lighthouse.png">
+</details>
+
+<details><summary>Change Bookings page</summary>
+<img src="docs/validation/changebook-lighthouse.png">
+</details>
+
+<details><summary>Delete Bookings page</summary>
+<img src="docs/validation/deletebook-lighthouse.png">
+</details>
