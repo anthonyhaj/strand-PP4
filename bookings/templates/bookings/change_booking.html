@@ -11,7 +11,6 @@
         </div>
     </div>
 </div>
-
 <div class="container" style="margin-bottom: 275px;">
     <div class="row justify-content-center">
         <div class="col-lg-5 custom-bg-color text-white rounded">
@@ -27,7 +26,8 @@
                     {% if field.field.choice_field %}
                     <!-- If it is, it creates a dropdown menu for the choices -->
                     <select name="{{ field.name }}" id="{{ field.auto_id }}" class="form-control"
-                        style="color:black;background:white;">
+                        style="color:black;background:white;" aria-label="{{ field.label }}"
+                        aria-describedby="{{ field.id_for_label }}-help">
                         <!-- This populates the dropdown menu with the available choices -->
                         {% for choice in field.field.choices %}
                         <option value="{{ choice.0 }}" {% if field.value == choice.0 %} selected {% endif %}
@@ -37,15 +37,17 @@
                     {% elif field.name == "requested_date" %}
                     <!-- If the current field is the "requested_date", it creates a date input field -->
                     <input type="date" class="form-control" id="{{ field.auto_id }}" name="{{ field.name }}"
-                        value="{{ field.value|default:'' }}" />
+                        value="{{ field.value|default:'' }}" aria-label="{{ field.label }}"
+                        aria-describedby="{{ field.id_for_label }}-help" />
                     {% else %}
                     <!-- For all other fields, it creates a standard input field -->
                     <input type="{{ field.field.widget.input_type }}" class="form-control" id="{{ field.auto_id }}"
-                        name="{{ field.name }}" value="{{ field.value|default:'' }}" />
+                        name="{{ field.name }}" value="{{ field.value|default:'' }}" aria-label="{{ field.label }}"
+                        aria-describedby="{{ field.id_for_label }}-help" />
                     {% endif %}
                     <!-- If there is help text for the field, it is displayed below the input -->
                     {% if field.help_text %}
-                    <small class="form-text text-muted">{{ field.help_text }}</small>
+                    <small class="form-text text-muted" id="{{ field.id_for_label }}-help">{{ field.help_text }}</small>
                     {% endif %}
                     <!-- If there are any validation errors for the field, they are displayed in an alert box -->
                     {% for error in field.errors %}
