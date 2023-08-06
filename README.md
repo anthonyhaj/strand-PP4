@@ -825,6 +825,8 @@ Tested Devices with Browsers:
   - Google Chrome
   - Firefox
 
+  ## Bugs 
+
 | **Bug** | **Fix** |
 | ------- | ------- |
 | The booking form was not pre-filling with the user's booking details when they tried to change their booking  | This issue was fixed by providing initial data for the form in the change_booking view. The initial data was populated with the current booking details |
@@ -834,8 +836,17 @@ Tested Devices with Browsers:
 | The delete booking functionality didn't show any feedback to the user after successful deletion | A success message was implemented using Django's messages framework to confirm deletion of the booking | 
 | When trying to access a booking of another user, there was no restriction or error message | A conditional check was added in the change_booking and delete_booking views to prevent a user from accessing or modifying bookings made by another user |
 
-### Heroku Deployment
+## Heroku Deployment
 
-#### Deploying in Heroko:
+### Deploying in Heroko:
 
+1. Create new app and add an app name
+2. Select region then click on "create app"
+3. Under resources in Addons search for postgres heroku, and add the Postgres database to the app
+5. Install the plugins dj-database-url and psycopg2-binary
+6. Run pip3 freeze > requirements.txt so they are added to the requirements.txt file
+7. Create a Procfile with the text: web: gunicorn the_diplomat.wsgi
+8. Ensure debug is set to false in the settings.py file
+9. Connect the app to GitHub, choose automatic deploy
+10. Click deploy to deploy and click on open app to view
 
