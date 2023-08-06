@@ -825,5 +825,17 @@ Tested Devices with Browsers:
   - Google Chrome
   - Firefox
 
+| **Bug** | **Fix** |
+| ------- | ------- |
+| The booking form was not pre-filling with the user's booking details when they tried to change their booking  | This issue was fixed by providing initial data for the form in the change_booking view. The initial data was populated with the current booking details |
+| User could book a table at a time that was already in the past | The clean method in the form was updated to check if the requested booking time was less than the current time. If so, a ValidationError was raised. |
+| In the booking page, the user's name was not being displayed correctly. | The reference was changed from booking.user.name to booking.name to display the user's name stored in the Booking model |
+| The booking form was showing the user_id instead of the name for the booking | The "__str_ method in the Booking model was updated to display the table name and the user's username. | 
+| The delete booking functionality didn't show any feedback to the user after successful deletion | A success message was implemented using Django's messages framework to confirm deletion of the booking | 
+| When trying to access a booking of another user, there was no restriction or error message | A conditional check was added in the change_booking and delete_booking views to prevent a user from accessing or modifying bookings made by another user |
+
+### Heroku Deployment
+
+#### Deploying in Heroko:
 
 
