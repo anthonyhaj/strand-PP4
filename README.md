@@ -84,7 +84,13 @@ create an account, see the menu, or contact the business.
 - Github projects was used to track and create user stories
 - Epics were created using milestones
 
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+<details><summary>See User Stories</summary>
+<img src="docs/features/projects-userstories.png">
+</details>
+
+<details><summary>See Epics</summary>
+<img src="docs/features/epics.png">
+</details>
 
 ## Design
 
