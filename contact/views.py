@@ -8,7 +8,6 @@ from django.contrib.auth.decorators import login_required
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-@login_required
 def contact(request):
     """
     View to handle the contact form submission and saving messages.

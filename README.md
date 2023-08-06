@@ -470,7 +470,12 @@ as well as opening hours
 <img src="docs/validation/contact-urlspy-validation.png">
 </details>
 
-<details><summary>views.py</summary>
-<img src="docs/validation/contact-viewspy-validation.png">
-</details>
+https://strand-pp4-d640c87ff185.herokuapp.com/
 
+### Lighthouse
+
+- Performance was tested using Lighthouse
+
+<details><summary>Index/Home page</summary>
+<img src="docs/validation/home-lighthouse.png">
+</details>
